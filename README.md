@@ -21,82 +21,51 @@ Python
 
 System Architecture
 
-Video Capture
+1. Video Capture
 Live video is captured from a webcam using OpenCV.
-
-Keypoint Extraction
+2. Keypoint Extraction
 MediaPipe detects and tracks hand landmarks in each frame.
-
-Sequence Formation
+3. Sequence Formation
 Extracted keypoints are stored as fixed-length sequences.
-
-Gesture Classification
+4. Gesture Classification
 An LSTM model processes the sequences to predict the corresponding sign.
-
-Text Output
+5. Text Output
 The predicted sign is displayed as text in real time.
 
 Dataset
 
 Gesture data is stored as NumPy (.npy) files.
-
 Each gesture consists of multiple sequences.
-
 Each sequence contains a fixed number of frames with extracted hand keypoints.
-
 The dataset was manually created to ensure consistency and accuracy.
-
 Note: The system is currently trained on a limited number of gesture classes for performance and training efficiency.
 
 Model Details
 
 Architecture: Multi-layer LSTM with fully connected dense layers
-
 Input: Sequences of hand keypoints
-
 Output: Softmax classification over predefined sign classes
-
 Framework: TensorFlow (Keras API)
 
 Installation
-git clone https://github.com/your-username/sign-language-to-text-translator.git
+```git clone https://github.com/your-username/sign-language-to-text-translator.git
 cd sign-language-to-text-translator
-pip install -r requirements.txt
+pip install -r requirements.txt```
 
 Usage
 
 Ensure a webcam is connected.
-
 Run the application:
-
-python app.py
-
-
+```python app.py```
 Perform supported sign language gestures in front of the camera.
-
 The predicted text will be displayed on screen in real time.
 
 Limitations
 
 Supports a limited number of gesture classes
-
 Performance depends on lighting conditions and camera quality
-
-Currently optimized for single-hand gestures
-
-Future Improvements
-
-Expand gesture vocabulary
-
-Support two-hand gestures
-
-Improve robustness under varying lighting conditions
-
-Add sentence-level translation and prediction smoothing
-
-Optimize for deployment on low-power devices
 
 Author
 
 Joshua Christopher
-Undergraduate Engineering Student | Software & AI Enthusiast
+Computer Engineering Graduate | Software & AI Enthusiast
