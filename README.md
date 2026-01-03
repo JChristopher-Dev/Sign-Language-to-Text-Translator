@@ -1,6 +1,5 @@
 ## Sign-Language-to-Text-Translator
 Real-time sign language to text translation using MediaPipe keypoints and an CNN model.
-
 The application leverages MediaPipe for hand keypoint extraction and a TensorFlow LSTM model for temporal gesture classification.
 
 ### Features
@@ -8,7 +7,6 @@ The application leverages MediaPipe for hand keypoint extraction and a TensorFlo
  - Real-time sign language recognition from live video input
  - Hand keypoint extraction using MediaPipe
  - Sequence-based gesture classification using an LSTM neural network
- - Modular design for easy dataset expansion and retraining
  - Live on-screen text output
 
 ### Technologies Used
@@ -51,7 +49,6 @@ Framework: TensorFlow (Keras API)
 ```
 git clone https://github.com/your-username/sign-language-to-text-translator.git
 cd sign-language-to-text-translator
-pip install -r requirements.txt 
 ```
 ### Usage
 
